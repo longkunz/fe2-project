@@ -1,0 +1,19 @@
+{
+  "name": "sky-garden-lite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "styled-components": "^5.3.3",
+    "use-sound": "^4.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "1.0.5",
+    "vite": "^2.6.4"
+  }
+}
