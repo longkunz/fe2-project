@@ -163,7 +163,7 @@ export default memo(function GardenItem({
               <progress
                 value={timer}
                 max="10"
-                style={{ width: 50, position: "absolute", bottom: -5 }}
+                style={{ width: 50, position: "absolute", bottom: 66 }}
               />
             </>
           )}
@@ -174,11 +174,16 @@ export default memo(function GardenItem({
 });
 //
 const Con = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  background-color: #fff0;
-  padding-bottom: 18px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+position: relative;
+background-color: #fff0;
+padding-bottom: 75px;
+background-image: url("./assets/images/pots/Pot.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 60px 80px;
 `;
+

@@ -13,8 +13,8 @@ const costBugSpray = 50;
 const costMusicPlayer = 100;
 
 export default memo(function App() {
-  const [coinBankVal, setCoinBankVal] = useState(50); //money
-  const [plants, setPlants] = useState([...Array(18).fill({})]);
+  const [coinBankVal, setCoinBankVal] = useState(300); //money
+  const [plants, setPlants] = useState([...Array(12).fill({})]); //land
   const [choosePlant, setChoosePlant] = useState(null);
   const [tool, setTool] = useState(null);
   const [bg, setBg] = useState(backgrounds[1]);

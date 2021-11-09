@@ -6,13 +6,7 @@ export default function Coin({ plantStatus, sale }) {
     <div>
       {plantStatus == 2 && (
         <CoinImage
-          src={`./assets/images/coins/${
-            sale >= 25 && sale < 50
-              ? "silver"
-              : sale >= 50 && sale < 100
-              ? "gold"
-              : "diamond"
-          }.gif`}
+          src={`./assets/images/inf/cart.png`}
         />
       )}
     </div>
@@ -21,7 +15,7 @@ export default function Coin({ plantStatus, sale }) {
 //
 const CoinImage = styled.img`
   position: absolute;
-  top: 70px;
-  left: 5px;
-  width: 20px;
+  top: 40px;
+  left: 10px;
+  width: 40px;
 `;

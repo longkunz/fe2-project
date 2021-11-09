@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #88e0ef;
+  background: #fff;
 }
 
 .gd-container {
@@ -14,6 +14,7 @@ body {
   transform: translate(-50%, -50%);
   max-width: 100%;
   user-select: none;
+  background: rgb(163, 233, 250);
 }
 
 .gd-container-game {
@@ -40,6 +41,9 @@ body {
   position: relative;
   width: 60px;
   margin-bottom: 3px;
+  -webkit-box-shadow: 0px 1px 13px -2px rgba(0, 0, 0, 0.85);
+  box-shadow: 0px 1px 13px -2px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgb(197, 165, 165);
 }
 
 .gd-sendBank-item:hover {
@@ -49,10 +53,12 @@ body {
 .gd-sendBank-item-price {
   width: 20px;
   position: absolute;
-  right: 15px;
-  bottom: 3px;
+  right: 35px;
+  bottom: -3px;
   font-size: 12px;
   font-weight: bold;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #2b990c, 0 0 55px #49FF18, 0 0 75px #49ff18;
 }
 
 .gd-sendBank-item img {
@@ -74,6 +80,7 @@ body {
 .gd-sendBank-item.active img:nth-child(2) {
   display: block;
 }
+
 .gd-bank {
   position: absolute;
   top: 20px;

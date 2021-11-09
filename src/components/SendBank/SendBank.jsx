@@ -28,6 +28,7 @@ export default memo(function SendBank({
 //
 const Con = styled.div`
   position: absolute;
-  padding: 12px;
-  right: 50px;
+  padding: 13px;
+  left: 10px;
+  top: 60px;
 `;

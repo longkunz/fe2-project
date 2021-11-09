@@ -40,10 +40,10 @@ export default memo(function Garden({
 //
 const Con = styled.div`
   position: absolute;
-  left: 30%;
+  left: 34%;
   top: 14%;
-  width: 550px;
-  height: 405px;
+  width: 500px;
+  height: 480px;
   display: grid;
-  grid-template-columns: repeat(9, auto);
+  grid-template-columns: repeat(6, auto);
 `;

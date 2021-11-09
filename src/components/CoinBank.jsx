@@ -13,13 +13,13 @@ export default memo(function CoinBank({ coinBankVal }) {
 const CoinBankVal = styled.div`
   position: absolute;
   top: 60%;
-  left: 65%;
+  left: 55%;
   transform: translate(-50%, -50%);
 `;
 const Con = styled.div`
   position: absolute;
   top: 20px;
-  left: 50px;
+  right: 50px;
   width: 128px;
   height: 31px;
   background-repeat: no-repeat;
