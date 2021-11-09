@@ -1,0 +1,55 @@
+const urlPlantb = "./assets/images/plantb/";
+const urlPlant = "./assets/images/plant/";
+//
+export default {
+  plant1: {
+    image1b: urlPlantb + "PlantB1A.png",
+    image2b: urlPlantb + "PlantB1B.png",
+    image1: urlPlant + "Seed.png",
+    image2: urlPlant + "Plant1A.png",
+    image3: urlPlant + "Plant1B.png",
+    purchasePrice: 50,
+    salePrice: 25,
+    timer: 10,
+  },
+  plant2: {
+    image1b: urlPlantb + "PlantB2A.png",
+    image2b: urlPlantb + "PlantB2B.png",
+    image1: urlPlant + "Seed.png",
+    image2: urlPlant + "Plant2A.png",
+    image3: urlPlant + "Plant2B.png",
+    purchasePrice: 100,
+    salePrice: 50,
+    timer: 10,
+  },
+  plant3: {
+    image1b: urlPlantb + "PlantB3A.png",
+    image2b: urlPlantb + "PlantB3B.png",
+    image1: urlPlant + "Seed.png",
+    image2: urlPlant + "Plant3A.png",
+    image3: urlPlant + "Plant3B.png",
+    purchasePrice: 150,
+    salePrice: 75,
+    timer: 10,
+  },
+  plant4: {
+    image1b: urlPlantb + "PlantB4A.png",
+    image2b: urlPlantb + "PlantB4B.png",
+    image1: urlPlant + "Seed.png",
+    image2: urlPlant + "Plant4A.png",
+    image3: urlPlant + "Plant4B.png",
+    purchasePrice: 50,
+    salePrice: 25,
+    timer: 10,
+  },
+  plant5: {
+    image1b: urlPlantb + "PlantB5A.png",
+    image2b: urlPlantb + "PlantB5B.png",
+    image1: urlPlant + "Seed.png",
+    image2: urlPlant + "Plant5A.png",
+    image3: urlPlant + "Plant5B.png",
+    purchasePrice: 200,
+    salePrice: 100,
+    timer: 10,
+  },
+};
