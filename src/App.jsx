@@ -7,30 +7,22 @@ import { objectToArray, isEmptyObject } from "./helpers/commonFunctions";
 import backgrounds from "./constants/backgrounds";
 
 const plantsList = objectToArray(plants);
-const costTreeFood = 50;
-const costWateringCan = 10;
-const costBugSpray = 50;
-const costMusicPlayer = 100;
+const soundtrack = new Audio(`./assets/sounds/audio.mp3`);
 
 export default memo(function App() {
   const [coinBankVal, setCoinBankVal] = useState(300); //money
   const [plants, setPlants] = useState([...Array(12).fill({})]); //land
   const [choosePlant, setChoosePlant] = useState(null);
   const [tool, setTool] = useState(null);
-  const [bg, setBg] = useState(backgrounds[1]);
+  const [bg, setBg] = useState(backgrounds[0]);
+  const [playSoundTrack, setPlaySoundtrack] = useState(false);
 
+  //
   useEffect(() => {
     // if game started
     window.scrollTo(0, 1);
     const started = localStorage.getItem("game-started");
     if (started) {
-      // set background image
-      setBg(backgrounds[Math.floor(Math.random() * 3)]);
-
-      // get background from localStorage
-      const bg = localStorage.getItem("game-background");
-      setBg(bg);
-
       const coinBank = localStorage.getItem("game-coin-bank");
       setCoinBankVal(parseInt(coinBank));
     }
@@ -65,6 +57,15 @@ export default memo(function App() {
     setPlants(newPlants);
   };
 
+  //Sound
+  useEffect(() => {
+    soundtrack.load();
+    soundtrack.play();
+    soundtrack.muted= true;
+  }, [playSoundTrack]);
+
+
+  //
   const backgroundImage = bg !== undefined ? `url(${bg})` : "";
   //
   return (
@@ -83,9 +84,12 @@ export default memo(function App() {
         </h1>
       }
     >
-      <div className="gd-container">
+      <div className="gd-container" onClick={()=>{
+        setPlaySoundtrack(true);
+        soundtrack.muted=false;
+      }}>
         <div className="gd-container-game" style={{ backgroundImage }}>
-          <div style={{ display: bg === undefined ? "none" : "block" }}>
+          <div style={{ display: bg === undefined ? "none" : "block" }} >
             <SendBank
               coinBankVal={coinBankVal}
               plants={plantsList}
@@ -103,10 +107,6 @@ export default memo(function App() {
               tool={tool}
               coinBankVal={coinBankVal}
               setCoinBankVal={setCoinBankVal}
-              costTreeFood={costTreeFood}
-              costWateringCan={costWateringCan}
-              costBugSpray={costBugSpray}
-              costMusicPlayer={costMusicPlayer}
             />
             <CoinBank coinBankVal={coinBankVal} />
           </div>
