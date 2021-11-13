@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Long\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+  C:\Program Files\nodejs\node.exe C:\Users\Long\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js deploy
 
 PATH: 
   C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Long\.dnx\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Git\cmd;D:\Ampps\php;C:\composer;C:\Program Files\nodejs\;C:\Users\Long\AppData\Local\Microsoft\WindowsApps;C:\Users\Long\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Long\AppData\Roaming\Composer\vendor\bin;C:\Users\Long\AppData\Roaming\npm;C:\adb;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Users\Long\AppData\Local\Microsoft\WindowsApps;C:\Users\Long\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Long\AppData\Roaming\Composer\vendor\bin;C:\Users\Long\AppData\Roaming\npm;C:\Users\Long\.dotnet\tools;D:\xamp\php;C:\Program Files\heroku\bin
@@ -14,24 +14,32 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\Long\Downloads\sky-garden-lite2\sky-garden-lite\node_modules\esbuild-windows-64\esbuild.exe'
+  SyntaxError: C:\Users\Long\Downloads\fe2-project\package.json: Unexpected string in JSON at position 59
+      at JSON.parse (<anonymous>)
+      at C:\Users\Long\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Long\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Long\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
+    "homepage": "https://longkunz.github.io/fe2-project"
     "name": "sky-garden-lite",
     "version": "0.0.0",
     "scripts": {
       "dev": "vite",
       "build": "vite build",
-      "serve": "vite preview"
+      "serve": "vite preview",
+  	"deploy": "vite build --base=/fe2-project/ && gh-pages -d dist"
     },
     "dependencies": {
       "react": "^17.0.0",
       "react-dom": "^17.0.0",
-      "styled-components": "^5.3.3"
+      "styled-components": "^5.3.3",
+      "use-sound": "^4.0.1"
     },
     "devDependencies": {
-      "@vitejs/plugin-react": "^1.0.0",
+      "@vitejs/plugin-react": "1.0.5",
       "vite": "^2.6.4"
     }
   }
@@ -324,10 +332,10 @@ Lockfile:
       estree-walker "^2.0.1"
       picomatch "^2.2.2"
   
-  "@vitejs/plugin-react@^1.0.0":
-    version "1.0.7"
-    resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-1.0.7.tgz#d542003afbae875f86fb89f3811a0f7c0c9479f5"
-    integrity sha512-dzxzohFOAVVXpGlFn6Uvw2xaSLp80Vjmg2e5G1XdMV266vVKrcDqg9CWP/AiJiXuubNUdgy1k4E8dNXI6WCyhw==
+  "@vitejs/plugin-react@1.0.5":
+    version "1.0.5"
+    resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-1.0.5.tgz#8da501137078c8cb791cf2611f23de7b96ad5494"
+    integrity sha512-n92p2fMlo0FZED+y5WYt+tM1mnQsVxcjZ8HuTJhv9gU/nW2zHwEoCemU78Az0KvF+bgafv2AdU4VEnP24bppvw==
     dependencies:
       "@babel/core" "^7.15.5"
       "@babel/plugin-transform-react-jsx" "^7.14.9"
@@ -361,12 +369,12 @@ Lockfile:
     integrity sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
   
   browserslist@^4.16.6:
-    version "4.17.5"
-    resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.17.5.tgz#c827bbe172a4c22b123f5e337533ceebadfdd559"
-    integrity sha512-I3ekeB92mmpctWBoLXe0d5wPS2cBuRvvW0JyyJHMrk9/HmP2ZjrTboNAZ8iuGqaEIlKguljbQY32OkOJIRrgoA==
+    version "4.17.6"
+    resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.17.6.tgz#c76be33e7786b497f66cad25a73756c8b938985d"
+    integrity sha512-uPgz3vyRTlEiCv4ee9KlsKgo2V6qPk7Jsn0KAn2OBqbqKo3iNcPEC1Ti6J4dwnz+aIRfEEEuOzC9IBk8tXUomw==
     dependencies:
-      caniuse-lite "^1.0.30001271"
-      electron-to-chromium "^1.3.878"
+      caniuse-lite "^1.0.30001274"
+      electron-to-chromium "^1.3.886"
       escalade "^3.1.1"
       node-releases "^2.0.1"
       picocolors "^1.0.0"
@@ -376,10 +384,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
     integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
   
-  caniuse-lite@^1.0.30001271:
-    version "1.0.30001274"
-    resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001274.tgz#26ca36204d15b17601ba6fc35dbdad950a647cc7"
-    integrity sha512-+Nkvv0fHyhISkiMIjnyjmf5YJcQ1IQHZN6U9TLUMroWR38FNwpsC51Gb68yueafX1V6ifOisInSgP9WJFS13ew==
+  caniuse-lite@^1.0.30001274:
+    version "1.0.30001279"
+    resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001279.tgz#eb06818da481ef5096a3b3760f43e5382ed6b0ce"
+    integrity sha512-VfEHpzHEXj6/CxggTwSFoZBBYGQfQv9Cf42KPlO79sWXCD1QNKWKsKzFeWL7QpZHJQYAvocqV6Rty1yJMkqWLQ==
   
   chalk@^2.0.0:
     version "2.4.2"
@@ -430,10 +438,10 @@ Lockfile:
     dependencies:
       ms "2.1.2"
   
-  electron-to-chromium@^1.3.878:
-    version "1.3.886"
-    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.886.tgz#ac039c4001b665b1dd0f0ed9c2e4da90ff3c9267"
-    integrity sha512-+vYdeBosI63VkCtNWnEVFjgNd/IZwvnsWkKyPtWAvrhA+XfByKoBJcbsMgudVU/bUcGAF9Xp3aXn96voWlc3oQ==
+  electron-to-chromium@^1.3.886:
+    version "1.3.892"
+    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.892.tgz#0e3f5bb1de577e2e5a6dffd5a4b278c4a735cd39"
+    integrity sha512-YDW4yIjdfMnbRoBjRZ/aNQYmT6JgQFLwmTSDRJMQdrY4MByEzppdXp3rnJ0g4LBWcsYTUvwKKClYN1ofZ0COOQ==
   
   esbuild-android-arm64@0.13.12:
     version "0.13.12"
@@ -596,6 +604,11 @@ Lockfile:
     integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
     dependencies:
       react-is "^16.7.0"
+  
+  howler@^2.1.3:
+    version "2.2.3"
+    resolved "https://registry.yarnpkg.com/howler/-/howler-2.2.3.tgz#a2eff9b08b586798e7a2ee17a602a90df28715da"
+    integrity sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==
   
   is-core-module@^2.2.0:
     version "2.8.0"
@@ -789,6 +802,13 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
     integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
+  
+  use-sound@^4.0.1:
+    version "4.0.1"
+    resolved "https://registry.yarnpkg.com/use-sound/-/use-sound-4.0.1.tgz#8c8de4badd16902db7762fd9418a4283b9bf7b3e"
+    integrity sha512-hykJ86kNcu6y/FzlSHcQxhjSGMslZx2WlfLpZNoPbvueakv4OF3xPxEtGV2YmculrIaH0tPp9LtG4jgy17xMWg==
+    dependencies:
+      howler "^2.1.3"
   
   vite@^2.6.4:
     version "2.6.13"

@@ -1,10 +1,12 @@
 {
+  "homepage": "https://longkunz.github.io/fe2-project",
   "name": "sky-garden-lite",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "vite build --base=/fe2-project/ && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -14,6 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "1.0.5",
+    "gh-pages": "^3.2.3",
     "vite": "^2.6.4"
   }
 }
